@@ -16,18 +16,24 @@
     
 }
 
-/*  {Astro.resolve('../styles/style.css')} */
+/*
+
+src: url("3Gelombang_radio.eot");
+
+src: url("3Gelombang_radio.eot?#iefix") format("embedded-opentype"),
+
+
+*/
 
 /* Special fonts */
 @font-face {
     font-family: Morse;
-    src: url("font/morse.ttf") format("truetype");
+    src: url("morse.ttf") format("truetype");
 }
 
 @font-face {
     font-family: Radio;
-    src: url("font/3Gelombang radio.eot");
-    src: url("font/3Gelombang radio.eot?#iefix") format("embedded-opentype"),url("font/3Gelombang radio.ttf") format("truetype");
+    src: url("3Gelombang_radio.ttf") format("truetype");
 }
 
 html {
