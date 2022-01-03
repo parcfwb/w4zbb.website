@@ -16,17 +16,6 @@
     
 }
 
-/* Special fonts */
-@font-face {
-    font-family: Morse;
-    src: url("morse.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: Radio;
-    src: url("3Gelombang_radio.ttf") format("truetype");
-}
-
 html {
     font-weight: var(--font-weight);
     font-size:   var(--font-size);
@@ -35,97 +24,11 @@ html {
     cursor: default;
 }
 
-header {padding-top: 1rem; }
-header h1 { font-weight: 400; letter-spacing: 0.2rem; font-size: 3rem; line-height: 1;}
-header h2 { font-size: 1rem; }
-
-main h1 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-main h2 { font-size: 1rem; }
-main p  { margin: 1rem 0; }
-
-footer { text-align: center; margin-bottom: 1rem;}
-.footer-paragraphs { padding: 1rem 0.5rem; background-color: var(--banner-color); }
-
-form { text-align: center; width: 100%;}
-form p { margin: 0.5rem 0; text-align: center; }
-
-.btn {
-    display: inline-block;
-    zoom: 1;
-    line-height: normal;
-    white-space: nowrap;
-    vertical-align: middle;
-    text-align: center;
-    user-select: none;
-    padding: 0.5em 0.6em;
-    color: rgba(0, 0, 0, 0.80);
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    background: #E6E6E6; /* windows grey */
-    text-decoration: none;
-    border-radius: var(--border-radius);
-    height: fit-content;
-}
-
-.btn.submit { width: 100%; }
 
 h1,h2,h3,h4,h5,h6 {
     font-family: var(--font-family);
     font-weight: 900;
     line-height: 1;
-}
-
-nav { padding-top: 1rem; }
-nav ul { display: flex; flex-direction: column; gap: 0.3rem; margin: 0; padding: 0; list-style: none; }
-nav li { border: 1px solid #cccccc; }
-
-nav a {
-    color: var(--link-color);
-    background-color: #f1f1f1;
-    display: inline-block;
-    letter-spacing: 2px;
-    text-decoration: none; 
-    outline: 0;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-}
-
-nav a:active, a:hover, a:focus { outline: none; cursor: pointer;}
-nav a:hover { background-color: #ffffff; }
-
-[hidden], .hidden { display: none; }
-
-/* Change any text into morse code. */
-.morse { font-family: Morse; font-size: 1.5rem;}
-.radio { font-family: Radio; }
-
-.banner {
-    padding: 0 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    background-color: var(--banner-color);
-}
-
-.banner a { text-decoration: none; outline: none;}
-
-.logos { display: flex; gap: .5rem; padding-top: 1rem; padding-bottom: 1rem;}
-
-.logos img { width: 50px; height: 50px; }
-
-/* This logo is special (rectangle) so I set the width to 30px to compensate */
-.logos .arrl-logo { width: 30px; height: 50px; }
-
-.menu-button { width: 100%; padding-top: 0.5rem; padding-bottom: 0.5rem; }
-
-.menu-button > button {
-    padding: 0.5rem 0;
-    font-size: 1.3rem;
-    width: 100%;
-    border: var(--border-width) solid var(--border-color);
-    border-radius: var(--border-radius);
 }
 
 .container { 
@@ -134,70 +37,63 @@ nav a:hover { background-color: #ffffff; }
     background-color: #ffffff; 
     padding-left: 0.5rem; 
     padding-right: 0.5rem;
-
 }
 
-.text-center { text-align: center; }
+header { padding-top: 1rem; }
+header h1 { font-weight: 700; letter-spacing: 0.2rem; font-size: 2rem; line-height: 1;}
+header h2 { font-size: 1rem; }
 
-.active { background-color: #ffffff;}
-
-.flex { display: flex; flex-direction: column; }
-.flex-center { justify-content: center; }
-.flex-wrap { flex-wrap: wrap; }
-.space-between { justify-content: space-between; }
-
-
-.solar-section { padding: 2rem 0; }
-
-.misc-section { padding-top: 2rem;}
-.misc-section-lookup { padding-top: 2rem; width: 100%;}
-
-.other-clubs { display: flex; flex-direction: column; width: 100%;}
-.other-clubs a { color: var(--link-color); text-decoration: none; }
-
-.form-input {
-    margin-bottom: 0.5rem;
-    width: 100%;
-}
-
-.silent-key {
-    border: 1px solid #cccccc;
-    border-radius: var(--border-radius);
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
-.sql-card-list {
+.banner {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.sql-card {
-    border: 1px solid #cccccc;
-    border-radius: var(--border-radius);
-    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    font-weight: 700;
+    background-color: var(--banner-color);
+    padding: 1rem 0;
 }
-.sql-card  p { margin-bottom: 0; margin-top: 1rem;}
 
-#solar-large { padding: 30px 0; display: none; }
+.banner a { text-decoration: none; outline: none; }
 
-#large-calendar { display: none; }
-#solar-small { display: inline-block; }
-#small-tables { display: block; }
-#large-tables { display: none; }
-#morse { display: none; }
+.banner-logos { display: flex; gap: 0.5rem; padding-top: 1rem; }
 
-/* utilities */
+.banner-logos img { width: 50px; height: 50px; }
+ 
+/* This logo is special (rectangle) so I set the width to 30px to compensate */
+.banner-logos .arrl-logo { width: 30px; height: 50px; }
 
-.card {
-    border: 1px solid #eaeaea;
-    border-radius: var(--border-radius);
-    padding: 0.5rem;
-    
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }
+
+nav a {
+    display: inline-block;
+    color: var(--link-color);
+    background-color: #f1f1f1;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #cccccc;
+}
+
+nav a:active, a:hover, a:focus { outline: none; cursor: pointer;}
+nav a:hover { background-color: #ffffff; }
+
+main h1 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+main h2 { font-size: 1rem; }
+main p  { margin: 1rem 0; }
+
+footer { text-align: center; margin-bottom: 1rem; background-color: var(--banner-color); }
+
+
+/* Flex utilities */
+.flex { display: flex; }
+.flex-column { flex-direction: column; }
+.flex-row { flex-direction: row; }
+.space-between { justify-content: space-between; }
 
 .p05  { padding: 0.5rem; }
 .pt05 { padding-top: 0.5rem; }
@@ -219,85 +115,28 @@ nav a:hover { background-color: #ffffff; }
 .pb4 { padding-bottom: 4rem; }
 .pb6 { padding-bottom: 6rem; }
 
+.mt05 { margin-top: 0.5rem; }
+.mb05 { margin-bottom: 0.5rem; }
+.mt1 { margin-top: 1rem; }
 .mb1 { margin-bottom: 1rem; }
 
 .width-100 { width: 100%; }
 
-
-.no-list-style { list-style: none; }
-.flex-gap { gap: 1rem; }
-.space-between { justify-content: space-between; }
-.bold { font-weight: 700; }
-.center-picture { display: flex; justify-content: center; }
+.active { background-color: #ffffff;}
+.text-center { text-align: center; }
 
 @media screen and (min-width: 700px) {
-    
     body { background-image: url(/assets/images/arrl_logo_bg.png); }
-    section { padding: 0 1rem; }
-    .menu-button { display: none; }
 
-    .silent-key { min-height: 440px; }
-
+    /* Hide the menu button - not needed on big screens and display full menu */
+    #menu-button { display:none; }
+    nav { margin: 0.5rem 0;}
     nav ul { display: flex; flex-direction: row; flex-wrap: wrap; }
-    nav li { border: 0; border: 1px solid #cccccc; }
+    nav a { padding: 0.5rem 1rem; }
+
+    header h1 { font-size: 4rem; }
+    .banner { flex-direction: row; justify-content: space-between; text-align: start; padding: 0.5rem 1rem; }
+    .banner-logos { padding: 0; }
     
-    #small-calendar { display: none; }
-    #large-calendar { display: block; }
-    #large-calendar iframe { height: calc(100vw * .75); max-height: 600px; }
-    #morse { display: inline-block; }
 
-    header h1 {
-        font-size: 5rem;
-    }
-
-    header h2 {
-        padding-left: 20px;
-    }
-    
-    .banner { flex-direction: row;}
-
-    .banner-title {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .banner-title div {
-        padding-top: 20px;
-    }
-
-    #solar-large { display: inline-block; }
-    #solar-small { display: none; }
-
-    #small-tables { display: none; }
-    #large-tables { display: block; }
-
-    .flex {
-        flex-direction: row;
-        flex-basis: 100%;
-    }
-
-    .callsign-search-form { width: 175px; }
-
-    form { text-align: start; }
-    /* form p { text-align: start; }*/
-
-    .logos {padding: 0;}
-
-    .misc-section-lookup { padding-top: 0; }
-
-    .google-map {
-        padding-top: 2rem;
-        display: block;
-        height: 400px;
-    }
-
-    .text-wrap-left {
-        float: left;
-        margin: 1rem 1rem 1rem 0;
-    }
-    .sql-card-list li {
-        flex: 1 1 auto;
-        width: 33%;
-    }
 }

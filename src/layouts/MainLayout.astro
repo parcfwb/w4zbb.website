@@ -8,60 +8,75 @@ let {title} = Astro.props;
 	<title>{title}</title>
 
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-	
 	<link rel="stylesheet" href={Astro.resolve('../styles/base.css')}>
 	<link rel="stylesheet" href={Astro.resolve('../styles/style.css')}>
-
+	
 </head>
 <body>
-    <header class="container">
-
-        <div class="banner">
-            <div class="banner-title">
-                <h1 class="radio">W4ZBB</h1>
-                <div>
+    <div class="container">
+        <header>
+            <div class="banner">
+                <div class="banner-title">
+                    <h1>W4ZBB</h1>
                     <h2>Playground Amateur Radion Club</h2>
-                    <h2 id="morse" class="morse">W4ZBB</h2>
+                </div>
+
+                <div class="banner-logos">
+                    <a href="index.html" alt="PARC Home">
+                        <img src="/assets/images/parc_logo.png" 
+                            alt="PARC Logo" 
+                            title="Playground Amateur Radio Club">
+                    </a>
+                    <a href="http://www.arrl.org/ares" target="_blank">
+                        <img src="/assets/images/ares_logo.png"
+                            alt="ARES Logo" 
+                            title="Amateur Radio Emergency Service">
+                    </a>
+                    <a href="http://www.arrl.org" target="_blank">
+                        <img src="/assets/images/arrl_logo.png"
+                            alt="ARRL logo" 
+                            title="ARRL Home Page"
+                            class="arrl-logo" >
+                    </a>
                 </div>
             </div>
 
-            <div class="logos">
-                <img src="/assets/images/parc_logo.png" alt="PARC Logo" title="Playground Amateur Radio Club">
-                <a href="http://www.arrl.org/ares" target="_blank">
-                    <img src="/assets/images/ares_logo.png" alt="ARES Logo" title="Amateur Radio Emergency Service">
-                </a>
-                <a href="http://www.arrl.org" target="_blank">
-                    <img class="arrl-logo" src="/assets/images/arrl_logo.png" alt="ARRL logo" title="ARRL Home Page">
-                </a>
+            <button id="menu-button" class="btn mt05 mb05 width-100">Menu</button>
 
-            </div>
-        </div>
+            <nav class="hidden">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/HamRadio/">Ham Radio</a></li>
+                    <li><a href="/Nets/">Nets</a></li>
+                    <li><a href="/HamFest/">Hamfest</a></li>
+                    <li><a href="/Resources">Resources</a></li>
+                    <li><a href="/Repeaters/">Repeaters</a></li>
+                    <li><a href="/ARES/">ARES</a></li>
+                    <li><a href="/Code/">Code</a></li>
+                    <li><a href="/Exams/">Exams</a></li>
+                    <li><a href="/Membership/">Membership</a></li>
+                    <li><a href="/Contact/">Contact</a></li>
+                    <li><a href="/Memorial/">Memorial</a></li>
+                    <li><a href="/Visiting/">Visiting Amateurs</a></li>
+                </ul>
+            </nav>
+    
+        </header>
 
-        <div class="menu-button">
-            <button>Menu</button>
-        </div>
+        <!-- Main Content -->
+        <slot></slot>
 
-        <nav id="main-nav" class="hidden">
-            <ul>
-                <li><a href="/">Home</a></li>
-            </ul>
-        </nav>
-   
-    </header>
-
-    <slot></slot>
-
-    <footer class="container">
-        <div class="footer-paragraphs">
+        <footer>
             <p><small>&copy; 2022 (PARC) &middot; Playground Amateur Radio Club &middot; Fort Walton Beach, Florida 32548 &middot; Grid EM60qj</small></p>
             <p class="pt05"><small>PARC is a 501(c)3 Public Charity</small></p>
-        </div>
-    </footer>
+        </footer>
+    </div>
+
 
     <script>
 
         const nav = document.querySelector("nav")
-        const menuButton = document.querySelector(".menu-button button");
+        const menuButton = document.querySelector("#menu-button");
 
         window.addEventListener("load", () => {
             if (window.innerWidth < 700) {

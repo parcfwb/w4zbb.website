@@ -2,38 +2,69 @@
 import MainLayout from '../layouts/MainLayout.astro';
 
 ---
+<style>
+
+    .solar { text-align: center; }
+    .solar-large { display: none; }
+    .solar-small { display: inline-block; padding: 2rem 0; }
+
+    .large-calendar { display: none; }
+    .small-calendar { display: inline-block; padding: 1rem 0; }
+
+    .misc-section { text-align: center; margin: 2rem 0; }
+
+    .other-clubs { display: flex; flex-direction: column; width: 100%; }
+    
+    .qrz-form { width: 100%; padding-top: 1.5rem; }
+
+    @media screen and (min-width: 700px) {
+        .misc-section { display: flex; text-align: left; }
+
+        .solar-large { display: inline-block; padding: 2rem 0; }
+        .solar-small { display: none; }
+
+        .large-calendar { display: block; width: 100%; height: 600px; margin-bottom: 1rem; }
+        .small-calendar { display: none; }
+    }
+
+</style>
+
 
 <MainLayout title="PARC - Home">
     <!-- Main content-->
-    <main class="container"> 
+    <main> 
         <section>
-            <h1 class="pt1-5">Welcome To The Playground Amateur Radio Club!</h1>
+            <h1 class="pt1">Welcome To The Playground Amateur Radio Club!</h1>
 
-            <p>Do you monitor <b>146.52 and 446.00 MHz simplex</b>? They are national calling frequencies. Give a call on the highway or monitor at home.</p>
-            
-            <p><b>A suggestion</b>: Many of us scan all the time. When you call someone, announce the frequency you're such as "on 52" or "on 79". Sometimes the scan function kicks in before we can see where it was. of course if the beep is unique like the one on 120, then.</p>
-            
-            <p>We are always soliciting ideas for <b>Tech Night</b> presentations. Have an idea? Let us know. And remember, the doctor is always in on Tech Night, so bring your questions to the meeting.</p>
-                                    
-            <p> If you are going to be in the local area take a look at the <a href="http://w4zbb.org/w4zbborg/index.php?page=VisitingAmateurs">Visiting Amateurs</a> page for information on the club and activities.
+            <p>
+                Do you monitor <b>146.52 and 446.00 MHz simplex</b>? They are national calling frequencies. Give a call on the highway or monitor at home.
+            </p>
+            <p>
+                <b>A suggestion</b>: Many of us scan all the time. When you call someone, announce the frequency you're such as "on 52" or "on 79". Sometimes the scan function kicks in before we can see where it was. of course if the beep is unique like the one on 120, then.
+            </p>
+            <p>
+                We are always soliciting ideas for <b>Tech Night</b> presentations. Have an idea? Let us know. And remember, the doctor is always in on Tech Night, so bring your questions to the meeting.
+            </p>                                  
+            <p>
+                If you are going to be in the local area take a look at the <a href="Visiting">Visiting Amateurs</a> page for information on the club and activities.
             </p>
 
         </section>
 
-        <section class="meetings-section">
+        <section>
 
             <h1>Meetings</h1>
-
             <p>
                 The Playground Amateur Radio Club normally meets the first and third Thursday of each month and is open to all members and guests. The first Thursday is Tech Night with subjects relating to technical and informative instruction, or demonstrations of interest to all amateurs. The third Thursday is the business meeting attended by elected officers and guests.
             </p>
-
-            <p>Do you have an announcement, bulletin, or suggestion? Send your mails to PARC Webmaster at <a href="mailto:webmaster@w4zbb.org">webmaster@w4zbb.org</a>.
+            <p>
+                Do you have an announcement, bulletin, or suggestion? Send your mails to PARC Webmaster at <a href="mailto:parcfwb@gmail.com">parcfwv@gmail.com</a>.
             </p>
 
         </section>
 
-        <section class="flex misc-section">                           
+        <section class="misc-section">
+            <!-- Other Clubs in the area -->                           
             <div class="other-clubs">
                 <h1>Other Clubs in the area</h1>
                 <a href="http://emeraldcoasthams.org" target="_blank">ECARA (Emerald Coast)</a>
@@ -45,7 +76,9 @@ import MainLayout from '../layouts/MainLayout.astro';
                 <a href="http://www.qsl.net/kf4hrm" target="_blank">TCARC (Niceville/Valparaiso)</a>
                 <a href="http://wf4x.com" target="_blank">WCARC (Walton County)</a>
             </div>
-            <div class="misc-section-lookup">
+
+            <!-- QRZ lookup form -->
+            <div class="qrz-form">
                 <form class="callsign-search-form" method="GET" target="_blank" action="http://www.qrz.com/db/">
                     <label>Callsign Lookup:</label>
                     <div class="form-control">
@@ -54,26 +87,24 @@ import MainLayout from '../layouts/MainLayout.astro';
                     </div>
                     <p><small>Provided by <a href="http://www.qrz.com" target="_blank">qrz.com</a></small></p>
                 </form>
-                
             </div>
         </section>
-
         
-        <section class="text-center solar-section">
+        <section class="solar">
 
             <!-- Solar large - shown on devices above 700px -->
-            <a id="solar-large" href="https://www.hamqsl.com/solar.html" title="Click to add Solar-Terrestrial Data to your website!"><img src="https://www.hamqsl.com/solar101vhfpic.php"></a>
+            <a class="solar-large" href="https://www.hamqsl.com/solar.html" title="Click to add Solar-Terrestrial Data to your website!"><img src="https://www.hamqsl.com/solar101vhfpic.php"></a>
 
             <!-- Solar Small - shown on devices below 700px -->
-            <a id="solar-small" href="https://www.hamqsl.com/solar.html" title="Click to add Solar-Terrestrial Data to your website!"><img src="https://www.hamqsl.com/solar2.php"></a>
+            <a class="solar-small" href="https://www.hamqsl.com/solar.html" title="Click to add Solar-Terrestrial Data to your website!"><img src="https://www.hamqsl.com/solar2.php"></a>
 
         </section>
 
-        <section class="calendar-section">
+        <section>
             <h2 class="pb1">PARC Events</h2>
 
-            <div>
-                <iframe id="small-calendar"
+            <!-- Small Calendar -->
+                <iframe class="small-calendar"
                     src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&src=cGFyY2Z3YkBnbWFpbC5jb20&color=%237986CB" 
                     style="border:none" 
                     width="100%" 
@@ -81,18 +112,16 @@ import MainLayout from '../layouts/MainLayout.astro';
                     frameborder="0" 
                     scrolling="no">
                 </iframe>
-            </div>
 
-            <div id="large-calendar">
-                <iframe 
+            <!-- Large Calendar -->
+
+            <iframe class="large-calendar"
                 src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=MONTH&src=cGFyY2Z3YkBnbWFpbC5jb20&color=%237986CB"
-                    style="border: 0" 
-                    width="100%" 
-                    frameborder="0" 
-                    scrolling="no">
-                </iframe>
-            </div>
-
+                style="border: 0" 
+                width="100%" 
+                frameborder="0" 
+                scrolling="no">
+            </iframe>
         </section>
     </main>
 
