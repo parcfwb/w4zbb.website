@@ -1,0 +1,87 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<style>
+
+    .roster { display: flex; flex-direction: column; align-items: center; gap: 1rem; padding-top: 2rem; padding-bottom: 1rem;}
+    
+
+    @media screen and (min-width: 700px) {
+        .roster { display: flex; flex-direction: row; gap: 1rem; padding: 0.5rem 0;}
+    }
+
+
+</style>
+
+<MainLayout title = "PARC - Nets">
+
+    <main>
+        <section class="pb1">
+            <h1 class="pt1-5">Nets</h1>
+
+            <p>The Playground Amateur Radio Club conducts a net each Sunday night at 7:30 PM CST on 146.790- 100Hz. This
+                is an informal swap net. Members and visitors alike are asked to check in and share some of their
+                experiences with the group. Maybe you have a question to submit or perhaps you have the answer to
+                another&#8217;s question. Either way, your input is valued and appreciated. Also, you will have the
+                opportunity to sell your used equipment or buy someone else&#8217;s during the Swap portion of the net.
+                So, take a few minutes, stop by the frequency, and share some of your week with us.</p>
+
+            <h1>OTHER NETS:</h1>
+
+            <ul>
+                <li>Monday Nights: Okaloosa ARES at 7:30 PM on 147.120+ 100Hz.</li>
+                <li>Tuesday Nights: Northwest Florida DX Net at 7:30 PM on 147.555 (Simplex)</li>
+                <li>Friday Mornings: SARNet Duval County EOC (All Amateurs welcome) at 9:00 AM on 444.900+ 100Hz</li>
+                <li>Sunday Nights: TCARC at 8:30 PM on 146.730</li>
+                <li class="pt1">Nightly: GCVTN at 8:00 PM on 147.360+ 100Hz</li>
+            </ul>
+
+            <p>See <a href="http://arrl-nfl.org/nets/">http://arrl-nfl.org/nets</a> for information
+                regarding wider area nets.</p>
+
+            <h1>PARC NCS Roster</h1>
+
+            <div class="roster">
+                <iframe
+                    src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showNav=0&amp;showDate=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23cccccc&amp;src=lrag7m7mlffh00tmifpo8563hs%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FChicago"
+                    width="170" 
+                    height="400" 
+                    frameborder="0"
+                    scrolling="no">
+                </iframe>
+                <iframe
+                    src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=400&amp;wkst=1&amp;bgcolor=%23cccccc&amp;src=parcfwb%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FChicago"
+                    width="100%" 
+                    height="400" 
+                    frameborder="0"
+                    scrolling="no">
+                </iframe>
+            </div>
+
+            <h1 class="pt1-5">Net Control Information</h1>
+
+            <p>This is ONLY a suggested NCS script, feel free to use it or not.</p>
+            <p>This is ____________ located in ______________. My name is ______, and I will be the Control Station
+                tonight for the Playground Amateur Radio Club net. We meet each Sunday evening at 19:30 Hours using the
+                146.790 repeater.</p>
+            <p>The Playground Amateur Radio Club meets the First &amp; Third Thursday of each month at 19:30 Hrs. The
+                clubhouse is located at the corner of First and Church Streets FWB. All are welcome.</p>
+            <p>The First Thursday is Tech night with subjects relating to technical and informative instruction or
+                demonstrations of interest to all Amateurs. Next Meeting is (__________________________).</p>
+            <p>The Third Thursday is the business meeting attended by elected officers and is open to all members and
+                guests. Next meeting is (____________________________).</p>
+            <p>This is an open net, all amateurs are invited to check in and participate. During the net you may discuss
+                any amateur radio related subject and you may sell, swap or trade amateur related items.</p>
+            <p>Please give your call sign slowly and remember to let the repeater drop before placing your call.</p>
+            <p>Stations on emergency power or short of time please call ______________.</p>
+            <p>I will now take regular check-ins please call ______________.</p>
+            <p>Late check-ins to the PARC Sunday Night Net please call ______________.</p>
+            <p>Does anyone have anything else for the net?</p>
+            <p>My personal thanks to all participants and I hope to hear each of you soon. A special thanks to the
+                Playground Amateur Radio Club for the use of their repeater. W4ZBB</p>
+            <p>Until next time, be safe and enjoy amateur radio. This is ______________, clear and returning the
+                frequency to normal Amateur use.</p>
+        </section>
+    </main>
+</MainLayout>

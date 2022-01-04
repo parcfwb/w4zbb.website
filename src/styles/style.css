@@ -88,7 +88,6 @@ main p  { margin: 1rem 0; }
 
 footer { text-align: center; margin-bottom: 1rem; background-color: var(--banner-color); }
 
-
 /* Flex utilities */
 .flex { display: flex; }
 .flex-column { flex-direction: column; }
@@ -125,6 +124,14 @@ footer { text-align: center; margin-bottom: 1rem; background-color: var(--banner
 .active { background-color: #ffffff;}
 .text-center { text-align: center; }
 
+.card {
+    border: 1px solid #eaeaea;
+    border-radius: var(--border-radius);
+    padding: 0.5rem;
+}
+
+form { text-align: center; width: 100%; }
+
 @media screen and (min-width: 700px) {
     body { background-image: url(/assets/images/arrl_logo_bg.png); }
 
@@ -137,6 +144,6 @@ footer { text-align: center; margin-bottom: 1rem; background-color: var(--banner
     header h1 { font-size: 4rem; }
     .banner { flex-direction: row; justify-content: space-between; text-align: start; padding: 0.5rem 1rem; }
     .banner-logos { padding: 0; }
-    
-
+ 
+    form { text-align: start; }
 }

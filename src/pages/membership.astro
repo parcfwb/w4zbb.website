@@ -1,0 +1,75 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<style>
+
+    .contact-form { display: flex; flex-direction: column;}
+
+    @media screen and (min-width: 700px) {
+        .contact-form { flex-direction: row; }
+    }
+
+</style>
+
+
+<MainLayout title = "PARC - Membership">
+
+    <main>
+
+        <section>
+            <h1 class="pt1-5">How To Join Our Club</h1>
+
+            <p>
+                ould you like to join PARC? Please review our <a href='/assets/documents/parc_constitution_sep2014.pdf' title='Club Constitution' target='_blank'>club constitution</a> and <a href='/assets/documents/parc_bylaws.pdf' title='Club By-Laws' target='_blank'>By-Laws</a>, then fill out the <a href='/assets/documents/parc_membership.pdf' title='Membership Application' target='_blank'>Membership Application</a>. Please submit the completed application, correct payment amount and a copy of your amateur license (if necessary) to the following address or bring it to any club meeting. Make checks payable to: <em>Playground Amateur Radio Club</em>
+            </p>
+
+            <p>
+                You can also email your application to the email address listed below and/or pay for dues using the payment form.
+            </p>
+
+            <p><strong>Note:</strong> New hams are eligible to receive their first year of membership at no cost.</p>
+            <div>
+                <ul>
+                    <li>PARC</li>
+                    <li>P.O. Box 873</li>
+                    <li>Fort Walton Beach, FL 32549</li>
+                </ul>
+
+                <p>
+                    <a href="mailto:parcfwb@gmail.com">parcfwb@gmail.com</a>
+                </p>
+            </div>
+
+
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="pt1 pb1">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="P7MCH6UFBQ8NG">
+                <input type="hidden" name="on0" value="Call Sign">
+                <input type="hidden" name="on1" value="Full Name">
+
+                <div class="contact-form">
+                    <div>
+                        <div class="form-control">
+                            <label>Call Sign:</label>
+                            <input type="text" name="os0" maxlength="200">
+                        </div>                        
+                        
+                        <div class="form-control">
+                            <label>Full Name:</label>
+                            <input type="text" name="os1" maxlength="200">
+                        </div>
+                    </div>
+                
+                    <div class="pl1 pt1">
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" name="submit"
+                            alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </div>
+                </div>
+            </form>
+
+        </section>
+    </main>
+
+</MainLayout>
