@@ -1,11 +1,30 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
 ---
+
+<style>
+
+    .documents {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 0;
+    }
+
+</style>
+
 <MainLayout title = "PARC - Resources">
 
     <main> 
-        <section class="pt1 pb1">
+        <section class="mt1">
             <a href="/resources/qsl_codes">QSL Codes</a>
+
+        </section>
+
+        <section class="documents"> 
+            <h1>PARC Documents</h1>
+            <a href="/resources/parc_bylaws">PARC By-Laws</a>
+            <a href="/resources/parc_constitution">PARC Constitution</a>
+            <a href="/resources/parc_membership_form">PARC Membership form</a>
         </section>
     </main>
 </MainLayout>
