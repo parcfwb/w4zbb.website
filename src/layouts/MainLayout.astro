@@ -1,5 +1,7 @@
 ---
 let {title} = Astro.props;
+import '../styles/base.css';
+import '../styles/style.css';
 ---
 <html lang="en">
 <head>
@@ -8,8 +10,6 @@ let {title} = Astro.props;
 	<title>{title}</title>
 
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-	<link rel="stylesheet" href={Astro.resolve('../styles/base.css')}>
-	<link rel="stylesheet" href={Astro.resolve('../styles/style.css')}>
 	
 </head>
 <body>
@@ -18,7 +18,7 @@ let {title} = Astro.props;
             <div class="banner">
                 <div class="banner-title">
                     <h1>W4ZBB</h1>
-                    <h2>Playground Amateur Radion Club</h2>
+                    <h2>Playground Amateur Radio Club</h2>
                 </div>
 
                 <div class="banner-logos">
